@@ -26,6 +26,10 @@ namespace Program
                     Console.WriteLine("Task 2 starting");
                     Task2.Run(args);
                     break;
+                case "3":
+                    Console.WriteLine("Task 3 starting");
+                    Task2.Run(args);
+                    break;
             }
         }
 
