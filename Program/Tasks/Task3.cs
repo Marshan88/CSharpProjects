@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 
-namespace PP_uke_1_modul_3
+namespace Program.Tasks
 {
-    internal class Program
+    internal class Task3
     {
-        static void Main(string[] args)
+        public static void Run(string[] args)
         {
             Random random = new Random();
             var crockmanager = new CrocManager();
@@ -12,10 +12,10 @@ namespace PP_uke_1_modul_3
             int randomNumber2 = 0;
             int points = 0;
 
-            static void showText(string text)
-            {
-                Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (text.Length / 2)) + "}", text));
-            }
+            //static void showText(string text)
+            //{
+            //    Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (text.Length / 2)) + "}", text));
+            //}
             showText("_.-*CrocodileGame*-._\n");
             showText("How to play: > (If first Number is bigger) < (Smaller)  or  =  (numbers are equal)\n");
 
@@ -41,6 +41,10 @@ namespace PP_uke_1_modul_3
                 showText("Your points: " + points + "\n");
 
             }
+        }
+        static void showText(string text)
+        {
+            Console.WriteLine(String.Format("{0," + ((Console.WindowWidth / 2) + (text.Length / 2)) + "}", text));
         }
     }
 }

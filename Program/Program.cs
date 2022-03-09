@@ -28,7 +28,7 @@ namespace Program
                     break;
                 case "3":
                     Console.WriteLine("Task 3 starting");
-                    Task2.Run(args);
+                    Task3.Run(args);
                     break;
             }
         }
@@ -36,7 +36,8 @@ namespace Program
         static void WriteTasks()
         {
             Console.WriteLine("1: Task 1");
-            Console.WriteLine("1: Task 2");
+            Console.WriteLine("2: Task 2");
+            Console.WriteLine("3: Task 3");
         }
     }
 }

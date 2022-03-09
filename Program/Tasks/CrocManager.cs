@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PP_uke_1_modul_3
+namespace Program.Tasks
 {
     internal class CrocManager
     {
