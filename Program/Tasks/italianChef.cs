@@ -30,7 +30,7 @@ namespace Program.Tasks   // Inheriting functionality and attributes from a clas
 
         public override void MakeSpecialDish()  //Again Virtual means this can be overriden in any sub classes, so we change from Virtual here to override and can change the text under in WriteLine so can make something else.
         {
-            Console.WriteLine("The Cheft makes chicken parm");
+            Console.WriteLine("The Chef makes chicken parm");
         }
     }
 }

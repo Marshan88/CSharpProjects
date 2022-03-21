@@ -20,7 +20,7 @@ namespace Program.Tasks
 
         public virtual void MakeSpecialDish()  //Virtual means this can be overriden in any sub classes
         {
-            Console.WriteLine("The Cheft makes bbq ribs");
+            Console.WriteLine("The Chef makes bbq ribs");
         }
     }
 }

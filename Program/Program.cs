@@ -11,33 +11,40 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("What tasks do you want to run?");
+            Console.WriteLine("What task do you want to run?\n------------------");
             WriteTasks();
-            Console.Write("Selection ");
+            Console.WriteLine("\n------------------");
+            Console.Write("\nSelection: ");
             string taskName = Console.ReadLine();
             switch (taskName)
             {
                 case "1":
-                    Console.WriteLine("Task 1 starting");
+                    Console.WriteLine("\nRunning Task 1\n------------------");
                     Task1.Run(args);
                     break;                
                 
                 case "2":
-                    Console.WriteLine("Task 2 starting");
+                    Console.WriteLine("\nRunning Task 2\n------------------");
                     Task2.Run(args);
                     break;
                 case "3":
-                    Console.WriteLine("Task 3 starting");
+                    Console.WriteLine("\nRunning Task 3\n------------------");
                     Task3.Run(args);
+                    break;
+                case "4":
+                    Console.WriteLine("\nRunning Task 4\n------------------");
+                    Task4.Run(args);
                     break;
             }
         }
 
         static void WriteTasks()
         {
-            Console.WriteLine("1: Task 1");
-            Console.WriteLine("2: Task 2");
-            Console.WriteLine("3: Task 3");
+            Console.WriteLine("Options:\n");
+            Console.WriteLine("1: Variables and assignment");
+            Console.WriteLine("2: Inheritance-IN PROGRESS");
+            Console.WriteLine("3: Crocodile Game");
+            Console.WriteLine("4: Dank Souls");
         }
     }
 }

@@ -43,6 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tasks\GameCharacters.cs" />
+    <Compile Include="Tasks\Task4.cs" />
     <Compile Include="Tasks\CrocManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
