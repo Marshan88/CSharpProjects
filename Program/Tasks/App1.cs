@@ -8,6 +8,33 @@ namespace Program.Tasks
     {
         public static void Run(string[] args)
         {
+            /*
+             * Example from Anders
+             */
+
+            var quizManager = new QuizManager2();
+
+            var question = new Question("Is Marius a simp?");
+            question.Answers.Add("Yes");
+            question.Answers.Add("No");
+            question.Answers.Add("Maybe");
+            question.SetCorrectAnswer("a");
+            quizManager.Questions.Add(question);
+
+            var question2 = new Question("Is Linn a moron?");
+            question2.Answers.Add("Yes");
+            question2.Answers.Add("No");
+            question2.Answers.Add("Maybe");
+            question2.Answers.Add("FUCK YES");
+            question2.SetCorrectAnswer("d");
+            quizManager.Questions.Add(question2);
+
+            quizManager.Run();
+
+            /*
+             * End example
+             */
+
             // B, D, A, B, B, A, A, A, B, C
             var quizmanager = new QuizManager();
             quizmanager.Logo();
@@ -19,7 +46,7 @@ namespace Program.Tasks
 
             quizmanager.Question1();
             answer = Console.ReadLine().ToLower();
-            quizmanager.Answer(answer, points, correct, incorrect);
+            quizmanager.Answer1(answer, points, correct, incorrect);
 
             quizmanager.Question2();
             answer = Console.ReadLine().ToLower();

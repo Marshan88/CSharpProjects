@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Tasks\Question.cs" />
     <Compile Include="Tasks\QuizManager.cs" />
     <Compile Include="Tasks\GameCharacters.cs" />
     <Compile Include="Tasks\App3.cs" />
@@ -51,9 +52,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tasks\App2.cs" />
     <Compile Include="Tasks\App1.cs" />
+    <Compile Include="Tasks\QuizManager2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

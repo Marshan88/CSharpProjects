@@ -33,7 +33,7 @@ namespace Program.Tasks
             Console.WriteLine("D: None of the above\n");
         }
 
-        public void Answer(string answer)
+        public void Answer1(string answer, int points, int correct, int incorrect)
         {
             if (answer == "b")
             {
