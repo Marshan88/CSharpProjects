@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Threading;
 
-namespace Program.Tasks
+namespace Program.Apps
 {
     internal class App2
     {

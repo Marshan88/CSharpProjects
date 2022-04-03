@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Program.Tasks
+namespace Program.Apps
 {
     internal class App3
     {

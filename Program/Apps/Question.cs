@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Program.Tasks
+namespace Program.Apps
 {
     public class Question
     {

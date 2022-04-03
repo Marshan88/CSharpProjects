@@ -1,16 +1,28 @@
 using System;
 using System.Collections.Generic;
 
-namespace Program.Tasks
+namespace Program.Apps
 {
-    public class QuizManager2
-    {
+    class QuizManager
+    {        
+        public string Logo()
+        {
+            string logo = @"________         __        
+\_____  \  __ __|__|_______
+ /  / \  \|  |  |  |___   /
+/   \_/   \  |  |  |/ ___/ 
+\_____\ \_/____/|__/_____ \
+       \__>              \/";
+            Console.WriteLine(logo + "\n");
+            return logo;
+        }
+
         private int _correct;
         private int _incorrect;
 
         public List<Question> Questions { get; }
 
-        public QuizManager2()
+        public QuizManager()
         {
             Questions = new List<Question>();
         }
@@ -20,7 +32,7 @@ namespace Program.Tasks
             for (var i = 0; i < Questions.Count; i++)
             {
                 Questions[i].Print(i + 1);
-                var answer = Console.ReadLine();
+                var answer = "Your answer: " + Console.ReadLine();
                 if (Questions[i].CheckAnswer(answer))
                 {
                     _correct++;
@@ -29,7 +41,7 @@ namespace Program.Tasks
                 else
                 {
                     _incorrect++;
-                    Console.WriteLine("Wrong answer");
+                    Console.WriteLine("Wrong!");
                 }
                 Console.WriteLine($"Your points: {_correct - _incorrect}\n");
             }

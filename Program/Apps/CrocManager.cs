@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Program.Tasks
+namespace Program.Apps
 {
     internal class CrocManager
     {
