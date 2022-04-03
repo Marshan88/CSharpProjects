@@ -2,11 +2,11 @@
 
 namespace Program.Tasks
 {
-    internal class Task4
+    internal class App3
     {
         public static void Run(string[] args)
         {
-            string logo = @"________                 __       _________            .__          
+            string logo = @"________                 __       _________             __          
 \______ \ _____    ____ |  | __  /   _____/ ____  __ __|  |   ______
  |    |  \\__  \  /    \|  |/ /  \_____  \ /    \|  |  \  |  /  ___/
  |    `   \/ __ \|   |  \    <   /        (   _  )  |  /  |__\___ \ 
@@ -14,14 +14,16 @@ namespace Program.Tasks
         \/     \/     \/     \/         \/                       \/";
 
 
-            string deaded = @"     )             (                     
-  ( /(             )\ )            (     
-  )\())       (   (()/(  (     (   )\ )  
- ((_)\  (    ))\   /(_)) )\   ))\ (()/(  
-__ ((_) )\  /((_) (_))_ ((_) /((_) ((_)) 
-\ \ / /((_)(_))(   |   \ (_)(_))   _| |  
- \ V // _ \| || |  | |) || |/ -_)/ _` |  
-  |_| \___/ \_,_|  |___/ |_|\___|\__,_|";
+            string deaded = @"▓██   ██▓ ▒█████   █    ██    ▓█████▄  ██▓▓█████ ▓█████▄ 
+ ▒██  ██▒▒██▒  ██▒ ██  ▓██▒   ▒██▀ ██▌▓██▒▓█   ▀ ▒██▀ ██▌
+  ▒██ ██░▒██░  ██▒▓██  ▒██░   ░██   █▌▒██▒▒███   ░██   █▌
+  ░ ▐██▓░▒██   ██░▓▓█  ░██░   ░▓█▄   ▌░██░▒▓█  ▄ ░▓█▄   ▌
+  ░ ██▒▓░░ ████▓▒░▒▒█████▓    ░▒████▓ ░██░░▒████▒░▒████▓ 
+   ██▒▒▒ ░ ▒░▒░▒░ ░▒▓▒ ▒ ▒     ▒▒▓  ▒ ░▓  ░░ ▒░ ░ ▒▒▓  ▒ 
+ ▓██ ░▒░   ░ ▒ ▒░ ░░▒░ ░ ░     ░ ▒  ▒  ▒ ░ ░ ░  ░ ░ ▒  ▒ 
+ ▒ ▒ ░░  ░ ░ ░ ▒   ░░░ ░ ░     ░ ░  ░  ▒ ░   ░    ░ ░  ░ 
+ ░ ░         ░ ░     ░           ░     ░     ░  ░   ░    
+ ░ ░                           ░                  ░      ";
 
             string ggez = @"  ________  _____________________________
  /  _____/ /  _____/\_   _____/\____    /
@@ -31,7 +33,7 @@ __ ((_) )\  /((_) (_))_ ((_) /((_) ((_))
         \/        \/        \/         \/";
 
 
-            GameCharacter hero = new GameCharacter("Hero", 50, 20, 20, 40);
+            GameCharacter hero = new GameCharacter("Hero", 50, 1, 40, 40);
             GameCharacter boss = new GameCharacter("Boss", 125, 0, 30, 10);
             Console.WriteLine();
 
@@ -40,9 +42,10 @@ __ ((_) )\  /((_) (_))_ ((_) /((_) ((_))
 
             while (hero.Health > 0 && boss.Health > 0)
             {
-                System.Threading.Thread.Sleep(3500);
                 hero.Fight(boss);
+                System.Threading.Thread.Sleep(2000);
                 boss.Fight(hero);
+                System.Threading.Thread.Sleep(2000);
             }
 
             Console.WriteLine("     <<<<< " + hero.Name + " : " + hero.Health + "HP" + " >>>>>");
