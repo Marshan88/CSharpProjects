@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Apps\Question.cs" />
-    <Compile Include="Apps\QuizManager2.cs" />
     <Compile Include="Apps\GameCharacters.cs" />
     <Compile Include="Apps\App3.cs" />
     <Compile Include="Apps\CrocManager.cs" />

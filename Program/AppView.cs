@@ -11,9 +11,8 @@ namespace Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("which app do you want to run?\n------------------" + "\n");
+            Console.WriteLine("which app do you want to run?\n");
             WriteTasks();
-            Console.WriteLine("\n------------------");
             Console.Write("\nApp nr: ");
             string appName = Console.ReadLine();
             switch (appName)
@@ -41,7 +40,7 @@ namespace Program
 
         static void WriteTasks()
         {
-            Console.WriteLine("1: Quiz - IN PROGRESS");
+            Console.WriteLine("1: Quiz");
             Console.WriteLine("2: Crocodile Game");
             Console.WriteLine("3: Dank Souls");
         }

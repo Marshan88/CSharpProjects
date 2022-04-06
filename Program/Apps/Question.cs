@@ -5,15 +5,16 @@ namespace Program.Apps
 {
     public class Question
     {
-        private readonly int _charStart = 65;
+        private const int CharStart = 65;
         private readonly string _question;
         private string _correctAnswer;
         public List<string> Answers { get; }
-
-        public Question(string question)
+        
+        public Question(string question, string correctAnswer, List<string> answers)
         {
             _question = question;
-            Answers = new List<string>();
+            Answers = answers;
+            SetCorrectAnswer(correctAnswer);
         }
 
         public void SetCorrectAnswer(string correctAnswer)
@@ -26,7 +27,7 @@ namespace Program.Apps
             Console.WriteLine($"Question {num}: {_question}");
             for (var i = 0; i < Answers.Count; i++)
             {
-                var character = (char)(_charStart + i);
+                var character = (char)(CharStart + i);
                 Console.WriteLine($"{character}: {Answers[i]}");
             }
         }
