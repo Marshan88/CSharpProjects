@@ -8,7 +8,7 @@ namespace Program.Apps
         {
             // B, D, A, B, B, A, A, A, B, C
             var quizManager = new QuizManager();
-            quizManager.Logo();
+            QuizManager.Logo();
             quizManager.Run();
             Console.Read();
         }

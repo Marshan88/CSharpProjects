@@ -5,7 +5,7 @@ namespace Program.Apps
 {
     internal class QuizManager
     {
-        public string Logo()
+        public static string Logo()
         {
             const string logo = @"________         __        
 \_____  \  __ __|__|_______
@@ -49,7 +49,7 @@ namespace Program.Apps
             Console.WriteLine("Total wrong: " + _incorrect);
         }
 
-        private List<Question> AddQuestionsAndAnswers()
+        private static List<Question> AddQuestionsAndAnswers()
         {   // B, D, A, B, A, A, A, A, B, C
             var quizQuestionList = new List<Question>()
             {

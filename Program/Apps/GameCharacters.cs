@@ -4,33 +4,33 @@ namespace Program.Apps
 {
     internal class GameCharacter
     {
-        public string Name;
+        public readonly string Name;
         public int Health;
-        private int Stamina;
-        private readonly int StrengthMax;
-        private readonly int StrengthMin;
+        private int _stamina;
+        private readonly int _strengthMax;
+        private readonly int _strengthMin;
         private readonly int _maxStamina;
         public GameCharacter()
         {
-            Stamina = 10;
-            StrengthMax = 10;
-            StrengthMin = 10;
-            _maxStamina = Stamina;
+            _stamina = 10;
+            _strengthMax = 10;
+            _strengthMin = 10;
+            _maxStamina = _stamina;
         }
 
         public GameCharacter(string name, int health, int strengthMin, int strengthMax, int stamina)
         {
             Name = name;
             Health = health;
-            Stamina = stamina;
-            StrengthMax = strengthMax;
-            StrengthMin = strengthMin;
+            _stamina = stamina;
+            _strengthMax = strengthMax;
+            _strengthMin = strengthMin;
             _maxStamina = stamina;
         }
 
         public void Fight(GameCharacter target)
         {
-            if (Stamina == 0)
+            if (_stamina == 0)
             {
                 Recharge();
                 Console.WriteLine("-" + Name + " Used stamina potion" + "-" + "\n");
@@ -38,10 +38,10 @@ namespace Program.Apps
             else
             {
                 var random = new Random();
-                var damage = random.Next(StrengthMin, StrengthMax + 1);
+                var damage = random.Next(_strengthMin, _strengthMax + 1);
 
                 target.TakeDamage(damage);
-                Stamina -= 10;
+                _stamina -= 10;
                 Console.WriteLine("-" + Name + " hits " + "for " + damage + " dmg, " + target.Name + " HP : " + target.Health + "\n");
             }
         }
@@ -57,7 +57,7 @@ namespace Program.Apps
 
         private void Recharge()
         {
-            Stamina = _maxStamina;
+            _stamina = _maxStamina;
         }
     }
 }
