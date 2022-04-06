@@ -3,11 +3,11 @@ using System.Collections.Generic;
 
 namespace Program.Apps
 {
-    class QuizManager
+    internal class QuizManager
     {
         public string Logo()
         {
-            string logo = @"________         __        
+            const string logo = @"________         __        
 \_____  \  __ __|__|_______
  /  / \  \|  |  |  |___   /
 /   \_/   \  |  |  |/ ___/ 

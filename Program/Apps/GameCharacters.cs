@@ -37,8 +37,8 @@ namespace Program.Apps
             }
             else
             {
-                Random random = new Random();
-                int damage = random.Next(StrengthMin, StrengthMax + 1);
+                var random = new Random();
+                var damage = random.Next(StrengthMin, StrengthMax + 1);
 
                 target.TakeDamage(damage);
                 Stamina -= 10;

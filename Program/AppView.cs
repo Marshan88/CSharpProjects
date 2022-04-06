@@ -9,36 +9,40 @@ namespace Program
 {
     public class AppView
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("which app do you want to run?\n");
-            WriteTasks();
-            Console.Write("\nApp nr: ");
-            string appName = Console.ReadLine();
-            switch (appName)
+            while (true)
             {
-                case "1":
-                    Console.WriteLine("\nQuiz is running\n------------------");
-                    App1.Run(args);
-                    break;
-                case "2":
-                    Console.WriteLine("\nCrocodile Game is running\n------------------");
-                    App2.Run(args);
-                    break;
-                case "3":
-                    Console.WriteLine("\nDank Souls is running\n------------------");
-                    App3.Run(args);
-                    break;
-                default:
-                    Console.WriteLine("\nInvalid input\n");
-                    System.Threading.Thread.Sleep(500);
-                    Console.WriteLine("Try again\n");
-                    Main(args);
-                    break;
+                Console.WriteLine("which app do you want to run?\n");
+                WriteTasks();
+                Console.Write("\nApp nr: ");
+                var appName = Console.ReadLine();
+                switch (appName)
+                {
+                    case "1":
+                        Console.WriteLine("\nQuiz is running\n------------------");
+                        App1.Run(args);
+                        break;
+                    case "2":
+                        Console.WriteLine("\nCrocodile Game is running\n------------------");
+                        App2.Run(args);
+                        break;
+                    case "3":
+                        Console.WriteLine("\nDank Souls is running\n------------------");
+                        App3.Run(args);
+                        break;
+                    default:
+                        Console.WriteLine("\nInvalid input\n");
+                        System.Threading.Thread.Sleep(500);
+                        Console.WriteLine("Try again\n");
+                        continue;
+                }
+
+                break;
             }
         }
 
-        static void WriteTasks()
+        public static void WriteTasks()
         {
             Console.WriteLine("1: Quiz");
             Console.WriteLine("2: Crocodile Game");
