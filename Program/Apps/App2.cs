@@ -3,7 +3,7 @@ using System.Diagnostics;
 
 namespace Program.Apps
 {
-    internal class App2
+    internal static class App2
     {
         public static void Run(string[] args)
         {
@@ -30,18 +30,18 @@ namespace Program.Apps
                 var timeTaken = stopWatch.Elapsed.TotalSeconds;
                 if (randomNumber1 < randomNumber2)
                 {
-                    points = crocManager.CheckUserInput(command, points, "<");
-                    points = crocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "<");
+                    points = CrocManager.CheckUserInput(command, points, "<");
+                    points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "<");
                 }
                 if (randomNumber1 > randomNumber2)
                 {
-                    points = crocManager.CheckUserInput(command, points, ">");
-                    points = crocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, ">");
+                    points = CrocManager.CheckUserInput(command, points, ">");
+                    points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, ">");
                 }
                 if (randomNumber1 == randomNumber2)
                 {
-                    points = crocManager.CheckUserInput(command, points, "=");
-                    points = crocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "=");
+                    points = CrocManager.CheckUserInput(command, points, "=");
+                    points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "=");
                 }
                 stopWatch.Stop();
 

@@ -7,7 +7,7 @@ using Program.Apps;
 
 namespace Program
 {
-    public class AppView
+    public static class AppView
     {
         private static void Main(string[] args)
         {
@@ -42,7 +42,7 @@ namespace Program
             }
         }
 
-        public static void WriteTasks()
+        private static void WriteTasks()
         {
             Console.WriteLine("1: Quiz");
             Console.WriteLine("2: Crocodile Game");

@@ -2,7 +2,7 @@
 
 namespace Program.Apps
 {
-    internal class App1
+    internal static class App1
     {
         public static void Run(string[] args)
         {

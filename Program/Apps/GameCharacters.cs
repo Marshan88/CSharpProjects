@@ -6,9 +6,9 @@ namespace Program.Apps
     {
         public string Name;
         public int Health;
-        public int Stamina;
-        public int StrengthMax;
-        public int StrengthMin;
+        private int Stamina;
+        private readonly int StrengthMax;
+        private readonly int StrengthMin;
         private readonly int _maxStamina;
         public GameCharacter()
         {
@@ -46,7 +46,7 @@ namespace Program.Apps
             }
         }
 
-        public void TakeDamage(int damage)
+        private void TakeDamage(int damage)
         {
             Health -= damage;
             if (Health < 0)
@@ -55,7 +55,7 @@ namespace Program.Apps
             }
         }
 
-        public void Recharge()
+        private void Recharge()
         {
             Stamina = _maxStamina;
         }

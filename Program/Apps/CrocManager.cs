@@ -2,7 +2,7 @@
 {
     internal class CrocManager
     {
-        public int CheckUserInput(string command, int points, string character)
+        public static int CheckUserInput(string command, int points, string character)
         {
             if (command == character)
             {
@@ -14,7 +14,7 @@
             }
             return points;
         }
-        public int CheckUserInputTime(string command, int points, double time, string character)
+        public static int CheckUserInputTime(string command, int points, double time, string character)
         {
             if (command == character && time < 1)
             {

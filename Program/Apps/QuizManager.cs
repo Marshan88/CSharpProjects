@@ -20,7 +20,7 @@ namespace Program.Apps
         private int _correct;
         private int _incorrect;
 
-        public List<Question> Questions { get; }
+        private List<Question> Questions { get; }
 
         public QuizManager()
         {
@@ -49,7 +49,7 @@ namespace Program.Apps
             Console.WriteLine("Total wrong: " + _incorrect);
         }
 
-        public List<Question> AddQuestionsAndAnswers()
+        private List<Question> AddQuestionsAndAnswers()
         {   // B, D, A, B, A, A, A, A, B, C
             var quizQuestionList = new List<Question>()
             {

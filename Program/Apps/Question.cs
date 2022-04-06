@@ -8,7 +8,7 @@ namespace Program.Apps
         private const int CharStart = 65;
         private readonly string _question;
         private string _correctAnswer;
-        public List<string> Answers { get; }
+        private List<string> Answers { get; }
         
         public Question(string question, string correctAnswer, List<string> answers)
         {
@@ -17,7 +17,7 @@ namespace Program.Apps
             SetCorrectAnswer(correctAnswer);
         }
 
-        public void SetCorrectAnswer(string correctAnswer)
+        private void SetCorrectAnswer(string correctAnswer)
         {
             _correctAnswer = correctAnswer.ToLower();
         }
