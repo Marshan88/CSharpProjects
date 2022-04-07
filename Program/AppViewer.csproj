@@ -48,6 +48,7 @@
     <Compile Include="Apps\App3.cs" />
     <Compile Include="Apps\CrocManager.cs" />
     <Compile Include="AppView.cs" />
+    <Compile Include="Apps\CrocQuestion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Apps\App2.cs" />
     <Compile Include="Apps\App1.cs" />

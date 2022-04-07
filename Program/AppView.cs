@@ -13,9 +13,9 @@ namespace Program
         {
             while (true)
             {
-                Console.WriteLine("which app do you want to run?\n");
-                WriteTasks();
-                Console.Write("\nApp nr: ");
+                Console.WriteLine("What game do you want to play?\n");
+                GetGame();
+                Console.Write("\n");
                 var appName = Console.ReadLine();
                 switch (appName)
                 {
@@ -33,8 +33,6 @@ namespace Program
                         break;
                     default:
                         Console.WriteLine("\nInvalid input\n");
-                        System.Threading.Thread.Sleep(500);
-                        Console.WriteLine("Try again\n");
                         continue;
                 }
 
@@ -42,10 +40,10 @@ namespace Program
             }
         }
 
-        private static void WriteTasks()
+        private static void GetGame()
         {
             Console.WriteLine("1: Quiz");
-            Console.WriteLine("2: Crocodile Game");
+            Console.WriteLine("2: Crocodile");
             Console.WriteLine("3: Dank Souls");
         }
     }

@@ -9,7 +9,7 @@ namespace Program.Apps
         private readonly string _question;
         private string _correctAnswer;
         private List<string> Answers { get; }
-        
+
         public Question(string question, string correctAnswer, List<string> answers)
         {
             _question = question;

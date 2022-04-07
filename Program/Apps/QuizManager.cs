@@ -56,9 +56,9 @@ namespace Program.Apps
                 new Question("Question 1: Which of the following methods is an entry point in the C# console program?",
                     "B", new List<string>()
                     {
-                        "public static void Program()", 
-                        "public static void Main()", 
-                        "public static void main()", 
+                        "public static void Program()",
+                        "public static void Main()",
+                        "public static void main()",
                         "None of the above\n"
                     }),
                 new Question("Question 2: Which of the followings are value types in C#?",
@@ -72,7 +72,7 @@ namespace Program.Apps
                 new Question("Question 3: Which of the following is a reference type in C#?",
                     "A", new List<string>()
                     {
-                        "String", 
+                        "String",
                         "Long",
                         "Boolean",
                         "None of the above"
