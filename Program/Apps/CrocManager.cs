@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices.ComTypes;
 
 
 namespace Program.Apps
@@ -18,62 +22,90 @@ namespace Program.Apps
             return logo;
         }
 
-        private int _points;
-        private string _command;
-        private char _character;
-
-        public int CheckUserInput()
+        public int CheckAnswerCorrect(string command, int points, string character)
         {
-            if (_command == _character.ToString())
-            {
-                _points += 1;
+
+            if (command == character.ToString())
+            { 
+                points++;
             }
             else
             {
-                _points -= 1;
+                points--;
             }
 
-            return _points;
-        }
-
-        public int CheckUserInputTime()
-        {
-            if (_command == _character.ToString())
-            {
-                _points += 1;
-            }
-            else
-            {
-                _points -= 1;
-            }
-
-            return _points;
+            return points;
         }
 
         public void Run()
         {
             var random = new Random();
-            //var stopWatch = new Stopwatch();
+            var points = 0;
             while (true)
             {
                 var randomNumber1 = random.Next(1, 101);
                 var randomNumber2 = random.Next(1, 101);
                 Console.WriteLine(randomNumber1 + " ? " + randomNumber2);
-                //stopWatch.Start();
-                _command = Console.ReadLine();
-                //var timeTaken = stopWatch.Elapsed.TotalSeconds;
+                var command = Console.ReadLine();
                 if (randomNumber1 < randomNumber2)
                 {
-                    _points = CheckUserInput();
-                    _points = CheckUserInputTime();
+                    points = CheckAnswerCorrect(command, points, "<");
                 }
-                //stopWatch.Stop();
-                Console.WriteLine("Your points: " + _points + "\n");
-            }
 
+                if (randomNumber1 > randomNumber2)
+                {
+                    points = CheckAnswerCorrect(command, points, ">");
+                }
+
+                if (randomNumber1 == randomNumber2)
+                {
+                    points = CheckAnswerCorrect(command, points, "=");
+                }
+
+                Console.WriteLine("Your points: " + points + "\n");
+            }
         }
+
     }
 }
+
+//var timeTaken = stopWatch.Elapsed.TotalSeconds;
+//stopWatch.Start();
+//stopWatch.Stop();
+
+//var random = new Random();
+//var stopWatch = new Stopwatch();
+//var points = 0;
+//CrocManager.Logo();
+//Console.WriteLine("How to play: Type in > If first Number is bigger, < if Smaller or = when equal.\n");
+
+//while (true)
+//{
+//    var randomNumber1 = random.Next(1, 101);
+//    var randomNumber2 = random.Next(1, 101);
+//    Console.WriteLine(randomNumber1 + " ? " + randomNumber2);
+//    stopWatch.Start();
+//    var command = Console.ReadLine();
+//    var timeTaken = stopWatch.Elapsed.TotalSeconds;
+//    if (randomNumber1 < randomNumber2)
+//    {
+//        points = CrocManager.CheckUserInput(command, points, "<");
+//        points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "<");
+//    }
+//    if (randomNumber1 > randomNumber2)
+//    {
+//        points = CrocManager.CheckUserInput(command, points, ">");
+//        points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "<");
+//    }
+//    if (randomNumber1 == randomNumber2)
+//    {
+//        points = CrocManager.CheckUserInput(command, points, "=");
+//        points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "=");
+//    }
+//    stopWatch.Stop();
+
+//    Console.WriteLine("\n" + timeTaken + "\n");
+//    Console.WriteLine("Your points: " + points + "\n");
 
 //public int CheckUserInputTime(double time)
 //{

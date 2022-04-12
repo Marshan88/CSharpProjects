@@ -14,7 +14,7 @@ namespace Program
             while (true)
             {
                 Console.WriteLine("What game do you want to play?\n");
-                GetGame();
+                GetGameList();
                 Console.Write("\n");
                 var appName = Console.ReadLine();
                 switch (appName)
@@ -40,7 +40,7 @@ namespace Program
             }
         }
 
-        private static void GetGame()
+        private static void GetGameList()
         {
             Console.WriteLine("1: Quiz");
             Console.WriteLine("2: Crocodile");

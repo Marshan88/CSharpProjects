@@ -10,13 +10,13 @@ namespace Program.Apps
         private readonly int _strengthMax;
         private readonly int _strengthMin;
         private readonly int _maxStamina;
-        public GameCharacter()
-        {
-            _stamina = 10;
-            _strengthMax = 10;
-            _strengthMin = 10;
-            _maxStamina = _stamina;
-        }
+        //public GameCharacter()
+        //{
+        //    _stamina = 10;
+        //    _strengthMax = 10;
+        //    _strengthMin = 10;
+        //    _maxStamina = _stamina;
+        //}
 
         public GameCharacter(string name, int health, int strengthMin, int strengthMax, int stamina)
         {
