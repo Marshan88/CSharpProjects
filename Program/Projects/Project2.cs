@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Data;
-using System.Diagnostics;
-using System.Runtime.InteropServices.ComTypes;
-using System.Runtime.Serialization.Formatters;
 
-namespace Program.Apps
+
+namespace Program.Projects
 {
-    internal static class App2
+    internal static class Project2
     {
         public static void Run(string[] args)
         {

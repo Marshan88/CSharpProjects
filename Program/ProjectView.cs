@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Program.Apps;
+using Program.Projects;
 
 namespace Program
 {
-    public static class AppView
+    public static class ProjectView
     {
         private static void Main(string[] args)
         {
@@ -16,20 +12,20 @@ namespace Program
                 Console.WriteLine("What game do you want to play?\n");
                 GetGameList();
                 Console.Write("\n");
-                var appName = Console.ReadLine();
-                switch (appName)
+                var projectName = Console.ReadLine();
+                switch (projectName)
                 {
                     case "1":
                         Console.WriteLine("\nQuiz is running\n------------------");
-                        App1.Run(args);
+                        Project1.Run(args);
                         break;
                     case "2":
                         Console.WriteLine("\nCrocodile Game is running\n------------------");
-                        App2.Run(args);
+                        Project2.Run(args);
                         break;
                     case "3":
                         Console.WriteLine("\nDank Souls is running\n------------------");
-                        App3.Run(args);
+                        Project3.Run(args);
                         break;
                     default:
                         Console.WriteLine("\nInvalid input\n");

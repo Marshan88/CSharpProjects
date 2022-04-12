@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Program.Apps
+namespace Program.Projects
 {
     internal class QuizManager
     {

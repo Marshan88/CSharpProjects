@@ -43,15 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Apps\Question.cs" />
-    <Compile Include="Apps\GameCharacters.cs" />
-    <Compile Include="Apps\App3.cs" />
-    <Compile Include="Apps\CrocManager.cs" />
-    <Compile Include="AppView.cs" />
+    <Compile Include="Projects\Question.cs" />
+    <Compile Include="Projects\GameCharacters.cs" />
+    <Compile Include="Projects\Project3.cs" />
+    <Compile Include="Projects\CrocManager.cs" />
+    <Compile Include="ProjectView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Apps\App2.cs" />
-    <Compile Include="Apps\App1.cs" />
-    <Compile Include="Apps\QuizManager.cs" />
+    <Compile Include="Projects\Project2.cs" />
+    <Compile Include="Projects\Project1.cs" />
+    <Compile Include="Projects\QuizManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

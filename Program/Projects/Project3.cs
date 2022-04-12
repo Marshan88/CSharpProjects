@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Program.Apps
+namespace Program.Projects
 {
-    internal static class App3
+    internal static class Project3
     {
         public static void Run(string[] args)
         {

@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices.ComTypes;
 
 
-namespace Program.Apps
+namespace Program.Projects
 {
     internal class CrocManager
     {
@@ -22,10 +17,10 @@ namespace Program.Apps
             return logo;
         }
 
-        public int CheckAnswerCorrect(string command, int points, string character)
+        public int CheckAnswerCorrect(string answer, int points, string character)
         {
 
-            if (command == character.ToString())
+            if (answer == character)
             { 
                 points++;
             }
@@ -46,20 +41,20 @@ namespace Program.Apps
                 var randomNumber1 = random.Next(1, 101);
                 var randomNumber2 = random.Next(1, 101);
                 Console.WriteLine(randomNumber1 + " ? " + randomNumber2);
-                var command = Console.ReadLine();
+                var answer = Console.ReadLine();
                 if (randomNumber1 < randomNumber2)
                 {
-                    points = CheckAnswerCorrect(command, points, "<");
+                    points = CheckAnswerCorrect(answer, points, "<");
                 }
 
                 if (randomNumber1 > randomNumber2)
                 {
-                    points = CheckAnswerCorrect(command, points, ">");
+                    points = CheckAnswerCorrect(answer, points, ">");
                 }
 
                 if (randomNumber1 == randomNumber2)
                 {
-                    points = CheckAnswerCorrect(command, points, "=");
+                    points = CheckAnswerCorrect(answer, points, "=");
                 }
 
                 Console.WriteLine("Your points: " + points + "\n");
@@ -85,22 +80,22 @@ namespace Program.Apps
 //    var randomNumber2 = random.Next(1, 101);
 //    Console.WriteLine(randomNumber1 + " ? " + randomNumber2);
 //    stopWatch.Start();
-//    var command = Console.ReadLine();
+//    var answer = Console.ReadLine();
 //    var timeTaken = stopWatch.Elapsed.TotalSeconds;
 //    if (randomNumber1 < randomNumber2)
 //    {
-//        points = CrocManager.CheckUserInput(command, points, "<");
-//        points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "<");
+//        points = CrocManager.CheckUserInput(answer, points, "<");
+//        points = CrocManager.CheckUserInputTime(answer, points, stopWatch.Elapsed.TotalSeconds, "<");
 //    }
 //    if (randomNumber1 > randomNumber2)
 //    {
-//        points = CrocManager.CheckUserInput(command, points, ">");
-//        points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "<");
+//        points = CrocManager.CheckUserInput(answer, points, ">");
+//        points = CrocManager.CheckUserInputTime(answer, points, stopWatch.Elapsed.TotalSeconds, "<");
 //    }
 //    if (randomNumber1 == randomNumber2)
 //    {
-//        points = CrocManager.CheckUserInput(command, points, "=");
-//        points = CrocManager.CheckUserInputTime(command, points, stopWatch.Elapsed.TotalSeconds, "=");
+//        points = CrocManager.CheckUserInput(answer, points, "=");
+//        points = CrocManager.CheckUserInputTime(answer, points, stopWatch.Elapsed.TotalSeconds, "=");
 //    }
 //    stopWatch.Stop();
 
