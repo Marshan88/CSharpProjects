@@ -3,14 +3,14 @@ using System.Collections.Generic;
 
 namespace Program.Projects
 {
-    public class Question
+    public class QuizQuestions
     {
         private const int CharStart = 65;
         private readonly string _question;
         private string _correctAnswer;
         private List<string> Answers { get; }
 
-        public Question(string question, string correctAnswer, List<string> answers)
+        public QuizQuestions(string question, string correctAnswer, List<string> answers)
         {
             _question = question;
             Answers = answers;

@@ -2,9 +2,9 @@
 
 namespace Program.Projects
 {
-    internal static class Project1
+    internal static class Quiz
     {
-        public static void Run(string[] args)
+        public static void Run()
         {
             // B, D, A, B, B, A, A, A, B, C
             var quizManager = new QuizManager();

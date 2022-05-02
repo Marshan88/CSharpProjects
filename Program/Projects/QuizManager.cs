@@ -20,7 +20,7 @@ namespace Program.Projects
         private int _correct;
         private int _incorrect;
 
-        private List<Question> Questions { get; }
+        private List<QuizQuestions> Questions { get; }
 
         public QuizManager()
         {
@@ -49,11 +49,11 @@ namespace Program.Projects
             Console.WriteLine("Total wrong: " + _incorrect);
         }
 
-        private static List<Question> AddQuestionsAndAnswers()
+        private static List<QuizQuestions> AddQuestionsAndAnswers()
         {   // B, D, A, B, A, A, A, A, B, C
-            var quizQuestionList = new List<Question>()
+            var quizQuestionList = new List<QuizQuestions>()
             {
-                new Question("Question 1: Which of the following methods is an entry point in the C# console program?",
+                new QuizQuestions("Question 2: Which of these are the correct way create a main?",
                     "B", new List<string>()
                     {
                         "public static void Program()",
@@ -61,7 +61,7 @@ namespace Program.Projects
                         "public static void main()",
                         "None of the above\n"
                     }),
-                new Question("Question 2: Which of the followings are value types in C#?",
+                new QuizQuestions("Question 2: Which of the followings are value types in C#?",
                     "D", new List<string>()
                     {
                         "Int32",
@@ -69,7 +69,7 @@ namespace Program.Projects
                         "Decimal",
                         "All of the above"
                     }),
-                new Question("Question 3: Which of the following is a reference type in C#?",
+                new QuizQuestions("Question 3: Which of the following is a reference type in C#?",
                     "A", new List<string>()
                     {
                         "String",
@@ -77,7 +77,7 @@ namespace Program.Projects
                         "Boolean",
                         "None of the above"
                     }),
-                new Question("Question 4: What is the nullable type in C#?",
+                new QuizQuestions("Question 4: What is the nullable type in C#?",
                     "B", new List<string>()
                     {
                         "It allows assignment of null to reference type",
@@ -85,7 +85,7 @@ namespace Program.Projects
                         "It allows assignment of null to static class",
                         "None of the above"
                     }),
-                new Question("Question 5: Struct is a _____",
+                new QuizQuestions("Question 5: Struct is a _____",
                     "A", new List<string>()
                     {
                         "Reference type",
@@ -93,7 +93,7 @@ namespace Program.Projects
                         "Class type",
                         "String type"
                     }),
-                new Question("Question 6: 10 > 9 ? '10 is greater than 9' : '9 is greater than 10' is an example of _____",
+                new QuizQuestions("Question 6: 10 > 9 ? '10 is greater than 9' : '9 is greater than 10' is an example of _____",
                     "A", new List<string>()
                     {
                         "Ternary operator",
@@ -101,7 +101,7 @@ namespace Program.Projects
                         "Greater than operator",
                         "Inverse operator"
                     }),
-                new Question("Question 7: Which of the following data type can be used with enum?",
+                new QuizQuestions("Question 7: Which of the following data type can be used with enum?",
                     "A", new List<string>()
                     {
                         "Int",
@@ -109,7 +109,7 @@ namespace Program.Projects
                         "Boolean",
                         "All of the above"
                     }),
-                new Question("Question 8: What is an indexer?",
+                new QuizQuestions("Question 8: What is an indexer?",
                     "A", new List<string>()
                     {
                         "It allows an instance of a class to be indexed like an array",
@@ -117,7 +117,7 @@ namespace Program.Projects
                         "It creates index for instances of a class",
                         "None of the above"
                     }),
-                new Question("Question 9: String is _____",
+                new QuizQuestions("Question 9: String is _____",
                     "B", new List<string>()
                     {
                         "Mutable",
@@ -125,7 +125,7 @@ namespace Program.Projects
                         "Static",
                         "Value type"
                     }),
-                new Question("Question 10: All arrays start with _____ index",
+                new QuizQuestions("Question 10: All arrays start with _____ index",
                     "C", new List<string>()
                     {
                         "1",

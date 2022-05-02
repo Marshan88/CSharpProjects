@@ -5,33 +5,29 @@ namespace Program
 {
     public static class ProjectView
     {
-        private static void Main(string[] args)
+        public static void Main(string[] args)
         {
             while (true)
             {
-                Console.WriteLine("What game do you want to play?\n");
+                Console.WriteLine("Pick a game:\n");
                 GetGameList();
                 Console.Write("\n");
                 var projectName = Console.ReadLine();
                 switch (projectName)
                 {
                     case "1":
-                        Console.WriteLine("\nQuiz is running\n------------------");
-                        Project1.Run(args);
+                        Quiz.Run();
                         break;
                     case "2":
-                        Console.WriteLine("\nCrocodile Game is running\n------------------");
-                        Project2.Run(args);
+                        Crocodile.Run(args);
                         break;
                     case "3":
-                        Console.WriteLine("\nDank Souls is running\n------------------");
-                        Project3.Run(args);
+                        DankSouls.Run();
                         break;
                     default:
-                        Console.WriteLine("\nInvalid input\n");
+                        Console.WriteLine("Invalid input\n");
                         continue;
                 }
-
                 break;
             }
         }

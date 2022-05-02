@@ -3,12 +3,12 @@
 
 namespace Program.Projects
 {
-    internal static class Project2
+    internal static class Crocodile
     {
         public static void Run(string[] args)
         {
-            var crocManager = new CrocManager();
-            CrocManager.Logo();
+            var crocManager = new CrocodileManager();
+            CrocodileManager.Logo();
             crocManager.Run();
             Console.Read();
         }

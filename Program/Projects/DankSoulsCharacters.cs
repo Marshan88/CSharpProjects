@@ -2,28 +2,29 @@
 
 namespace Program.Projects
 {
-    internal class GameCharacter
+    internal class DankSoulsCharacters
     {
-        public readonly string Name;
-        public int Health;
-        private int _stamina;
-        private readonly int _strengthMax;
-        private readonly int _strengthMin;
-        private readonly int _maxStamina;
+        public string Name { get; }
+        public int Health { get; set; }
+        private int Stamina { get; set; }
+        private int StrengthMax { get; }
+        private int StrengthMin { get; }
+        private int MaxStamina { get; }
 
-        public GameCharacter(string name, int health, int strengthMin, int strengthMax, int stamina)
+        public DankSoulsCharacters(string name, int health, int strengthMin, int strengthMax, int stamina)
         {
+
             Name = name;
             Health = health;
-            _stamina = stamina;
-            _strengthMax = strengthMax;
-            _strengthMin = strengthMin;
-            _maxStamina = stamina;
+            Stamina = stamina;
+            StrengthMax = strengthMax;
+            StrengthMin = strengthMin;
+            MaxStamina = stamina;
         }
 
-        public void Fight(GameCharacter target)
+        public void Fight(DankSoulsCharacters target)
         {
-            if (_stamina == 0)
+            if (Stamina == 0)
             {
                 Recharge();
                 Console.WriteLine("-" + Name + " Used stamina potion" + "-" + "\n");
@@ -31,10 +32,10 @@ namespace Program.Projects
             else
             {
                 var random = new Random();
-                var damage = random.Next(_strengthMin, _strengthMax + 1);
+                var damage = random.Next(StrengthMin, StrengthMax + 1);
 
                 target.TakeDamage(damage);
-                _stamina -= 10;
+                Stamina -= 10;
                 Console.WriteLine("-" + Name + " hits " + "for " + damage + " dmg, " + target.Name + " HP : " + target.Health + "\n");
             }
         }
@@ -50,7 +51,9 @@ namespace Program.Projects
 
         private void Recharge()
         {
-            _stamina = _maxStamina;
+            Stamina = MaxStamina;
         }
+
+
     }
 }

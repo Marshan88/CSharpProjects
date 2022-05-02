@@ -43,14 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Projects\Question.cs" />
-    <Compile Include="Projects\GameCharacters.cs" />
-    <Compile Include="Projects\Project3.cs" />
-    <Compile Include="Projects\CrocManager.cs" />
+    <Compile Include="Projects\DankSoulsCharacters.cs" />
+    <Compile Include="Projects\DankSoulsItems.cs" />
+    <Compile Include="Projects\QuizQuestions.cs" />
+    <Compile Include="Projects\DankSoulsManager.cs" />
+    <Compile Include="Projects\DankSouls.cs" />
+    <Compile Include="Projects\CrocodileManager.cs" />
     <Compile Include="ProjectView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Projects\Project2.cs" />
-    <Compile Include="Projects\Project1.cs" />
+    <Compile Include="Projects\Crocodile.cs" />
+    <Compile Include="Projects\Quiz.cs" />
     <Compile Include="Projects\QuizManager.cs" />
   </ItemGroup>
   <ItemGroup>

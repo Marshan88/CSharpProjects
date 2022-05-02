@@ -3,7 +3,7 @@
 
 namespace Program.Projects
 {
-    internal class CrocManager
+    internal class CrocodileManager
     {
         public static string Logo()
         {
@@ -60,7 +60,6 @@ namespace Program.Projects
                 Console.WriteLine("Your points: " + points + "\n");
             }
         }
-
     }
 }
 
