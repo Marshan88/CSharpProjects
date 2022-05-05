@@ -23,7 +23,7 @@ namespace Program.Projects
                 //var staminaPotion = new Item("Stamina potion", 40);
                 //var healthPotion = new Item("Health potion", 50);
                 //var strengthPotion = new Item("Strength potion", 30);
-            Logo();
+
             Console.WriteLine("\n");
             Console.WriteLine(hero.Name + " : " + hero.Health + "HP | " + boss.Name + " : " + boss.Health + "HP" + "\n");
 
