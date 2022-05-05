@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace Program.Projects
 {
     internal class CrocodileManager

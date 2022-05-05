@@ -3,7 +3,7 @@ using Program.Projects;
 
 namespace Program
 {
-    public static class ProjectView
+    public static class Program
     {
         public static void Main(string[] args)
         {
